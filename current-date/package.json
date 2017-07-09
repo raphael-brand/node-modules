@@ -1,0 +1,13 @@
+{
+  "name": "current-date",
+  "version": "1.0.0",
+  "description": "creates a timestamp or date string",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raphael Brand <info@raphaelbrand.de>",
+  "license": "ISC"
+}
