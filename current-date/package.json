@@ -8,6 +8,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphael-brand/node-modules.git"
+  },
+  "keywords": [],
+  "homepage": "https://github.com/raphael-brand/node-modules#readme",
   "author": "Raphael Brand <info@raphaelbrand.de>",
-  "license": "ISC"
+  "bugs": {
+    "url": "https://github.com/raphael-brand/node-modules/issues"
+  },
+  "license": "MIT"
 }
