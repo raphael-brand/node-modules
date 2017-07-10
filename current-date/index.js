@@ -1,16 +1,23 @@
-///<reference path="index.d.ts" />
-var currentdate = (options) => {
-  var d = new Date();
-  var timestamp = d.getTime();
-  if(options && options.output === true) {
-    if(options.toString === true) {
-      console.log(d.toLocaleString());
+///<reference path="current-date.d.ts" />
+var CurrentDateOptions = (function () {
+    function CurrentDateOptions() {
+        this.output = false;
+        this.toString = false;
     }
-    else if(options){
-      console.log(''+timestamp);
+    return CurrentDateOptions;
+})();
+exports.CurrentDateOptions = CurrentDateOptions;
+var currentdate = function (options) {
+    var d = new Date();
+    var timestamp = d.getTime();
+    if (options && options.output === true) {
+        if (options.toString === true) {
+            console.log(d.toLocaleString());
+        }
+        else if (options) {
+            console.log('' + timestamp);
+        }
     }
-  }
-  return options && options.toString === true? d.toLocaleString() : timestamp;
-}
-
-module.exports = currentdate;
+    return options && options.toString === true ? d.toLocaleString() : timestamp;
+};
+exports.currentdate = currentdate;

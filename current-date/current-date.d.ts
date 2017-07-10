@@ -1,25 +1,29 @@
 declare namespace currentdate {
 
-  interface formatString {
+  interface ICurrentDateOptions {
     /**
      * if set, it logs on the console
      */
-    output: boolean,
+    output: boolean;
     /**
      * if set, it returns an ISO date string
      */
+    toString: boolean;
+  }
+
+  class CurrentDateOptions implements ICurrentDateOptions {
+    output: boolean;
     toString: boolean
   }
 
-
-  interface CurrentDate {
+  interface ICurrentDate {
     /**
      *  output (boolean): if set, it logs on the console
      *  toString (boolean): if set, it returns an ISO date string, instead of a timestamp
      *  @param options
      */
 
-    currentdate(options: { output: false, toString: false }): string;
+    currentdate(options: { output: boolean, toString: boolean }): string;
     /**
      * currentdate() returns
      * the current timestamp
@@ -33,5 +37,5 @@ declare namespace currentdate {
  *  output (boolean): if set, it logs on the console
  *  toString (boolean): if set, it returns an ISO date string, instead of a timestamp
  */
-declare const CurrentDateOptions: currentdate.formatString;
+declare const CurrentDateOptions: currentdate.CurrentDateOptions;
 
